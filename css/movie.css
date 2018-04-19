@@ -145,7 +145,7 @@ body {
 .peliculas{
   left: 120px;
   top: 80px;
-  margin: 0 20px;
+  margin: 0 20px 20px;
   position: absolute;
   display: grid;
   grid-template-rows: 60px 1fr 60px 1fr 60px 1fr;
@@ -154,7 +154,35 @@ body {
 }
 .subtitle {
   grid-column: span 3;
+  font-size: 20px;
 }
 .pelicula img{
   width: 100%;
+  vertical-align: bottom;
+}
+.pelicula{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* TEXTO DE LAS PELICULAS */
+.text-pelicula{
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+.pelicula:hover > .text-pelicula{
+  top:0;
+}
+.text-pelicula p{
+  padding: 5%;
+}
+.text-pelicula h3{
+  font-weight: normal;
+  margin-left: 20px;
 }
